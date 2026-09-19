@@ -6,142 +6,284 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
-{
-  "disable_ai": true,
-  "base_keymap": "VSCode",
-  "icon_theme": "Warm Charmed Icons",
-  "theme": "Catppuccin Mocha",
 
-  "theme_overrides": {
-    "Aura Dark": {
-      "editor.document_highlight.read_background": "#000000",
-      "editor.document_highlight.write_background": "#000000",
-      "border.variant": "#211F29",
-      "border": "#292633",
-      "title_bar.background": "#15141C",
-      "panel.background": "#1B1923",
-      "panel.focused_border": "#7C6AA6",
-      "players": [
-        {
-          "cursor": "#bd9dff"
-        }
-      ],
-      "syntax": {
-        "comment": {
-          "font_style": "italic",
-        },
-        "comment.doc": {
-          "font_style": "italic",
-        },
-      },
+{
+    // --------------------- General ----------------------------------------------
+
+    "disable_ai": true,
+    "base_keymap": "VSCode",
+
+
+    // --------------------- Themes ----------------------------------------------
+
+    "icon_theme": {
+        "mode": "light",
+        "light": "Warm Charmed Icons",
+        "dark": "Warm Charmed Icons"
     },
-  },
-  "title_bar": {
-    "show_onboarding_banner": false,
-    "show_project_items": false,
-    "show_branch_name": false,
-    "show_user_menu": false,
-  },
-  "tab_bar": {
-    "show": true,
-  },
-  "toolbar": {
-    "quick_actions": false,
-  },
-  "status_bar": {
-    "experimental.show": false,
-  },
-  "project_panel": {
-    "dock": "left",
-    // "default_width":  220,
-    "hide_root": false,
-    "auto_fold_dirs": false,
-    "starts_open": true,
-    "git_status": false,
-    "sticky_scroll": false,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Catppuccin Mocha - No Italics"
+    },
+
+    "theme_overrides": {
+        "Catppuccin Mocha - No Italics": {
+            "editor.document_highlight.read_background": "#000000",
+            "editor.document_highlight.write_background": "#000000",
+            "border.variant": "#313244",
+            "border": "#45475a",
+            "title_bar.background": "#181825",
+            "panel.background": "#181825",
+            "terminal.background": "#151521",
+            "editor.background": "#1E1E2E",
+            "panel.focused_border": "#b4befe",
+
+            "players": [
+                {
+                    "cursor": "#cba6f7"
+                }
+            ],
+
+            "syntax": {
+                "comment": {
+                    "font_style": "italic",
+                },
+                "comment.doc": {
+                    "font_style": "italic",
+                },
+            },
+        },
+    },
+
+
+    // --------------------- Fonts ----------------------------------------------
+
+    "ui_font_family": "JetBrainsMono Nerd Font",
+    "ui_font_size": 20,
+
+    // "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+    "buffer_font_size": 18,
+
+    "buffer_line_height": {
+        "custom": 1.8,
+    },
+
+
+    // --------------------- Fonts ligatures ------------------------------------
+
+    "buffer_font_features": {
+        "calt": false // Disable ligatures
+    },
+
+    // --------------------- Status Bar -----------------------------------------
+
+    "status_bar": {
+        "experimental.show": false,
+    },
+
+    // --------------------- Titlebar -------------------------------------------
+
+    "title_bar": {
+        "show_onboarding_banner": false,
+        "show_project_items": false,
+        "show_branch_name": false,
+        "show_user_menu": false,
+    },
+
+
+    // --------------------- Workspace ------------------------------------------
+
+    "centered_layout": {
+        "right_padding": 0.1,
+        "left_padding": 0.1,
+    },
+
+    "when_closing_with_no_tabs": "keep_window_open",
+    "close_on_file_delete": true,
+
+    "restore_on_file_reopen": true,
+    "restore_on_startup": "empty_tab",
+
+    "session": {
+        "restore_unsaved_buffers": true,
+    },
+
+
+    // --------------------- Editor ---------------------------------------------
+
+    "cursor_blink": false,
+    "cursor_shape": "block",
+    "current_line_highlight": "none",
+    "selection_highlight": false,
+
+    "gutter": {
+        "min_line_number_digits": 0,
+        // "folds": false,
+        "runnables": false,
+    },
+
+    "relative_line_numbers": "enabled",
+
+    "indent_guides": {
+        "enabled": true,
+    },
+
+    "tab_size": 4,
+    "auto_indent": "syntax_aware",
+    "auto_indent_on_paste": true,
+    "show_whitespaces": "none",
+    "extend_comment_on_newline": false,
+    "horizontal_scroll_margin": 1,
+    "vertical_scroll_margin": 1,
+    "format_on_save": "off",
+
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 5000,
+        },
+    },
+
+    // --------------------- Git Blame ------------------------------------------
+
+    "git": {
+        "git_gutter": "tracked_files",
+
+        "inline_blame": {
+            "enabled": false,
+        },
+    },
+
+
+    // --------------------- Editor Toolbar -------------------------------------
+
+    "toolbar": {
+        "quick_actions": false,
+    },
+
+    // --------------------- Editor Scrollbar and Minimap ------------------------
+
     "scrollbar": {
-      "show": "never",
+        "show": "never",
     },
-    "indent_guides": {
-      "show": "never",
-    }
-  },
-  "outline_panel": {
-    "default_width": 300,
-    "indent_guides": {
-      "show": "never",
+
+    // --------------------- Editor Tabs -----------------------------------------
+
+    "tab_bar": {
+        "show": true,
     },
-  },
-  "file_finder": {
-    "modal_max_width": "large"
-  },
-  "scrollbar": {
-    "show": "never",
-  },
-  "gutter": {
-    "min_line_number_digits": 0,
-    // "folds": false,
-    "runnables": false,
-  },
-  "indent_guides": {
-    "enabled": true
-  },
-  "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "ui_font_size": 16,
-  // "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 15,
-  "buffer_line_height": {
-    "custom": 1.8,
-  },
-  "vim_mode": true,
-  "vim": {
-      "cursor_shape": {
-          "normal": "block",
-          "insert": "bar",
-          "visual": "block",
-          "replace": "hollow"
-      }
-  },
-  "multi_cursor_modifier": "cmd_or_ctrl",
-  "cursor_shape": "block",
-  "cursor_blink": false,
-  "selection_highlight": false,
-  "drag_and_drop_selection": {
-  "enabled": false,
-  },
-  "seed_search_query_from_cursor": "never",
-  "current_line_highlight": "none",
-  "show_whitespaces": "none",
-  "tab_size": 4,
-  "auto_indent": "syntax_aware",
-  "auto_indent_on_paste": true,
-  "show_completions_on_input": true,
-  // "show_completion_documentation": false,
-  "inline_code_actions": false,
-  "format_on_save": "off",
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 5000,
-    }
-  },
-  "extend_comment_on_newline": false,
-  "horizontal_scroll_margin": 1,
-  "vertical_scroll_margin": 1,
-  "when_closing_with_no_tabs": "keep_window_open",
-  "close_on_file_delete": true,
-  "restore_on_file_reopen": true,
-  "restore_on_startup": "empty_tab",
-  "session": {
-    "restore_unsaved_buffers": true
-  },
-  "git": {
-    "git_gutter": "tracked_files",
-    "inline_blame": {
-      "enabled": false,
+
+    "tabs": {
+        "file_icons": false
     },
-  },
-  "centered_layout": {
-     "right_padding": 0.1,
-    "left_padding": 0.1,
-  },
+
+    // --------------------- Multibuffer ----------------------------------------
+
+    "close_panel_on_toggle": true,
+
+    // --------------------- Editor Completions, Snippets, Actions, Diagnostics -
+
+    "show_completions_on_input": true,
+    // "show_completion_documentation": false,
+    "inline_code_actions": false,
+    "colorize_brackets": true,
+    "code_lens": "on",
+
+    // --------------------- Edit Predictions ------------------------------------
+
+    // No custom settings
+
+
+    // --------------------- Editor Inlay Hints ----------------------------------
+
+    // No custom settings
+
+
+    // --------------------- File Finder -----------------------------------------
+
+    "file_finder": {
+        "modal_max_width": "large",
+    },
+
+    // --------------------- Project Panel ---------------------------------------
+
+    "project_panel": {
+        "dock": "left",
+        "default_width": 300,
+        "hide_root": false,
+        "auto_fold_dirs": false,
+        "starts_open": true,
+        "git_status": false,
+
+        "scrollbar": {
+            "show": "never",
+        },
+
+        "sticky_scroll": false,
+
+        "indent_guides": {
+            "show": "never",
+        },
+    },
+
+
+    // --------------------- Agent Panel -----------------------------------------
+
+    // No custom settings
+
+
+    // --------------------- Terminal Panel --------------------------------------
+    "terminal": {
+        // "font_family": "JetBrainsMono Nerd Font",
+        "font_size": 16,
+        "line_height": "standard",
+
+        "env": {
+
+        },
+    },
+
+
+    // --------------------- Other Panels ----------------------------------------
+
+    "outline_panel": {
+        "default_width": 300,
+
+        "indent_guides": {
+            "show": "never",
+        },
+    },
+
+
+    // --------------------- Collaboration Panels -------------------------------
+
+    // No custom settings
+
+
+    // --------------------- Vim -----------------------------------------------
+
+    "vim_mode": true,
+
+    "vim": {
+        "cursor_shape": {
+            "normal": "block",
+            "insert": "bar",
+            "visual": "block",
+            "replace": "hollow",
+        },
+    },
+
+    "multi_cursor_modifier": "cmd_or_ctrl",
+
+
+    // --------------------- Selection ------------------------------------------
+
+    "drag_and_drop_selection": {
+        "enabled": false,
+    },
+
+
+    // --------------------- Search ---------------------------------------------
+
+    "seed_search_query_from_cursor": "never",
 }
