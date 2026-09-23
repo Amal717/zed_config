@@ -187,6 +187,7 @@
     // "show_completion_documentation": false,
     "inline_code_actions": false,
     "colorize_brackets": true,
+    "always_treat_brackets_as_autoclosed": true,
     "code_lens": "on",
 
     // --------------------- Edit Predictions ------------------------------------
@@ -235,8 +236,10 @@
     // --------------------- Terminal Panel --------------------------------------
     "terminal": {
         // "font_family": "JetBrainsMono Nerd Font",
-        "font_size": 16,
+        "font_size": 17,
         "line_height": "standard",
+        "default_width": 640,
+        "default_height": 400,
 
         "env": {
 
@@ -274,6 +277,11 @@
     },
 
     "multi_cursor_modifier": "cmd_or_ctrl",
+
+    "which_key": {
+        "enabled": true,
+        "delay_ms": 150
+    },
 
 
     // --------------------- Selection ------------------------------------------
