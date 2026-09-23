@@ -155,6 +155,10 @@
             "space b b": "pane::AlternateFile",
             // Close buffer
             "space b d": "pane::CloseActiveItem",
+            // close left
+            "space b l": "pane::CloseItemsToTheLeft",
+            // close right
+            "space b r": "pane::CloseItemsToTheRight",
             // Close inactive buffers
             "space b q": "pane::CloseOtherItems",
             // Pin buffer
@@ -244,18 +248,18 @@
         }
     },
     {
-        "context": "vim_mode == normal || vim_mode == visual",
-        "bindings": {
-            "s": "vim::HelixJumpToWord",
-            "S": "vim::PushSneakBackward"
-        }
-    },
-    {
         "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
         "bindings": {
             "b": "vim::MiniBrackets",
             "q": "vim::MiniQuotes",
             "g": "vim::EntireFile"
+        }
+    },
+    // which key space
+    {
+        "context": "VimControl && !menu",
+        "bindings": {
+            "space": null
         }
     }
 ]
