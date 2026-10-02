@@ -103,7 +103,7 @@
     "close_on_file_delete": true,
 
     "restore_on_file_reopen": true,
-    "restore_on_startup": "empty_tab",
+    "restore_on_startup": "last_session",
 
     "session": {
         "restore_unsaved_buffers": true,
@@ -305,6 +305,22 @@
                     "--header-insertion=never"
                 ]
             }
+        },
+
+        "yaml-language-server": {
+            "settings": {
+                "yaml": {
+                    "format": {
+                        "singleQuote": true
+                    },
+                }
+            }
         }
     },
+
+    "languages": {
+        "Makefile": {
+            "hard_tabs": true
+        }
+    }
 }
