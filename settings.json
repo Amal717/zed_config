@@ -301,6 +301,8 @@
             "binary": {
                 "path": "/usr/bin/clangd",
                 "arguments": [
+                    "--qurey-driver=/usr/bin/gcc",
+                    "--qurey-driver=/usr/bin/g++",
                     "--query-driver=/usr/bin/arm-none-eabi-*",
                     "--header-insertion=never"
                 ]
